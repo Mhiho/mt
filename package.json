@@ -10,6 +10,11 @@
     "format": "prettier --write .",
     "prepare": "husky"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "sh .husky/pre-commit"
+    }
+  },
   "dependencies": {
     "next": "14.2.14",
     "react": "^18",
