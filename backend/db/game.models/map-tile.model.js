@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 
 export function mapTileModel(sequelize) {
   const attributes = {

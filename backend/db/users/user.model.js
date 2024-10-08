@@ -1,5 +1,4 @@
-import { DataTypes } from 'sequelize'
-
+import { DataTypes } from 'sequelize';
 
 export function userModel(sequelize) {
   const attributes = {

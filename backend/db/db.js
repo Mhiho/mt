@@ -1,11 +1,11 @@
-import mysql from 'mysql2/promise'
-import { Sequelize } from 'sequelize'
-import { lorisArmy } from '../initialData/lorisArmy'
+import mysql from 'mysql2/promise';
+import { Sequelize } from 'sequelize';
+import { lorisArmy } from '../initialData/lorisArmy';
 import { ibisArmy } from '../initialData/ibisArmy';
-import { wildArmy } from '../initialData/wildArmy'
-import { lorisBuildings } from '../initialData/lorisBuildings'
-import { ibisBuildings } from '../initialData/ibisBuildings'
-import { wildsBuildings } from '../initialData/wildBuildings'
+import { wildArmy } from '../initialData/wildArmy';
+import { lorisBuildings } from '../initialData/lorisBuildings';
+import { ibisBuildings } from '../initialData/ibisBuildings';
+import { wildsBuildings } from '../initialData/wildBuildings';
 import { generateMap } from '../utils/generate-map';
 import { userModel } from './users/user.model';
 import { tokenModel } from './tokens/token.model';
@@ -17,7 +17,6 @@ import { ibisBuildingsModel } from './game.models/ibis-buildings.model';
 import { wildArmyModel } from './game.models/wild-army.model';
 import { wildBuildingsModel } from './game.models/wild-buildings.model';
 import { mapTileModel } from './game.models/map-tile.model';
-
 
 const user = process.env('MYSQL_USER');
 const database = process.env('MYSQL_DATABASE');
@@ -51,7 +50,7 @@ export const db = () => {
     db.BuildingsIbis = ibisBuildingsModel(sequelize);
     db.BuildingsWild = wildBuildingsModel(sequelize);
     db.MapTile = mapTileModel(sequelize);
-    db.Creatures = creaturesModel(sequelize)
+    db.Creatures = creaturesModel(sequelize);
 
     //add dependencies between models
     db.Token.belongsTo(db.User, { foreignKey: 'userID', as: 'UserID' });

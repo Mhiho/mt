@@ -1,4 +1,4 @@
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 
 export function ibisBuildingsModel(sequelize) {
   const attributes = {

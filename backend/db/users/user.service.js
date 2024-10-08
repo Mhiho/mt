@@ -1,10 +1,9 @@
-const secret = process.env('secret')
-const tempSecret = process.env('secret')
-import jwt from 'jsonwebtoken'
+const secret = process.env('secret');
+const tempSecret = process.env('secret');
+import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs/dist/bcrypt';
-import { db } from '../db'
-import { sendVerificationMail, sendResetPwd } from '../../emails'
-
+import { db } from '../db';
+import { sendVerificationMail, sendResetPwd } from '../../emails';
 
 async function getPath(name) {
   return await db.User.scope('withHash')
@@ -182,4 +181,4 @@ const userService = {
   // addAvatar,
   getPath,
 };
-export default userService
+export default userService;

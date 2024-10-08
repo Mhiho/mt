@@ -1,7 +1,7 @@
 const slot = {
-    fields: 'fields',
-    forest: 'forest',
-    stone: 'stone'
-}
+  fields: 'fields',
+  forest: 'forest',
+  stone: 'stone',
+};
 
 module.exports = slot;
