@@ -84,7 +84,7 @@ export function mapTileModel(sequelize) {
     slots: { type: DataTypes.JSON, allowNull: true },
     ancientArtifact: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false },
   };
-  return sequelize.define('MapTile', attributes);
+  return sequelize.define('MapTile', attributes, { timestamps: false });
 }
 // terrainType:
 

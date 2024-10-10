@@ -1,0 +1,88 @@
+.forest {
+    background-color: green;
+}
+.stone {
+    background-color: grey;
+}
+.silver {
+    background-color: silver;
+}
+.castle {
+    background-color: navy;
+}
+.iron {
+    background-color: #333333;
+}
+.crop {
+    background-color: gold;
+}
+.greenfield {
+    background-color: lightgreen;
+}
+.magic {
+    background-color: darkred;
+}
+.hern {
+    border: 2px solid palevioletred;
+}
+.patr {
+    border: 2px solid blue;
+}
+.hord {
+    border: 2px solid aquamarine;
+}
+.ally {
+    background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 10px,
+      black 10px 20px
+    );
+}
+.line {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.legendContainer {
+    width: 50%;
+
+}
+.line div {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 5px;
+}
+
+.line .p {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 188px;
+    // height: 50px;
+    margin: 5px
+}
+.side {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    // flex-wrap: wrap;
+}
+.legend {
+    margin: 50px;
+    border: 10px solid black;
+}
+.legendTitle {
+    margin: 10px 0 10px 0;
+    font-size: 36px;
+    text-decoration: underline;
+}

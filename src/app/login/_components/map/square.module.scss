@@ -1,0 +1,27 @@
+
+.square {
+    padding: 0 0;   
+    // max-width: 40px;
+    min-width: 50px;
+    min-height: 50px;
+    // max-height: 40px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+.square:hover {
+    border: 3px solid red;
+}
+.squareCapitalView {
+    padding: 0 0;   
+    // max-width: 40px;
+    min-width: 70px;
+    min-height: 70px;
+    // max-height: 40px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;   
+}
+.square h6 {
+    font-size: 0.7em;
+}

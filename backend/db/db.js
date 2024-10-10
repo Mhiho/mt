@@ -6,7 +6,7 @@ import { wildArmy } from '../initialData/wildArmy';
 import { lorisBuildings } from '../initialData/lorisBuildings';
 import { ibisBuildings } from '../initialData/ibisBuildings';
 import { wildsBuildings } from '../initialData/wildBuildings';
-import { generateMap } from '../utils/generate-map';
+import { generateMap } from '../utils/generate-map.js';
 import { userModel } from './users/user.model';
 import { tokenModel } from './tokens/token.model';
 import { creaturesModel } from './game.models/creatures.model';
@@ -17,12 +17,13 @@ import { ibisBuildingsModel } from './game.models/ibis-buildings.model';
 import { wildArmyModel } from './game.models/wild-army.model';
 import { wildBuildingsModel } from './game.models/wild-buildings.model';
 import { mapTileModel } from './game.models/map-tile.model';
+import { config } from '../../config.js';
 
-const user = process.env('MYSQL_USER');
-const database = process.env('MYSQL_DATABASE');
-const password = process.env('MYSQL_PASSWORD');
-const host = process.env('HOST');
-export const db = () => {
+const user = config.MYSQL_USER;
+const database = config.MYSQL_DATABASE;
+const password = config.MYSQL_PASSWORD;
+const host = config.HOST;
+const db = () => {
   const setXY = 60;
   const setDLength = setXY * setXY;
   const initialize = async () => {
@@ -34,7 +35,7 @@ export const db = () => {
       database,
     });
     await connection.query(`CREATE DATABASE IF NOT EXISTS \`${database}\`;`);
-    await connection.query(`SET GLOBAL sql_mode = '';`);
+    // await connection.query(`SET GLOBAL sql_mode = '';`);
     // connect to db
     const sequelize = new Sequelize(database, user, password, {
       dialect: 'mysql',
@@ -71,3 +72,4 @@ export const db = () => {
 
   initialize().catch(console.error);
 };
+db();

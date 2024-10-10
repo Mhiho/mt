@@ -1,10 +1,11 @@
 import mysql from 'mysql2/promise';
-const host = process.env('HOST');
-const user = process.env('MYSQL_USER');
-const password = process.env('MYSQL_PASSWORD');
-const database = process.env('MYSQL_DATABASE');
+import { config } from '../../config';
 
 export const generateMap = async () => {
+  const host = config.HOST;
+  const user = config.MYSQL_USER;
+  const password = config.MYSQL_PASSWORD;
+  const database = config.MYSQL_DATABASE;
   const setXY = 60;
   const dragonGen = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 3,
@@ -107,3 +108,4 @@ export const generateMap = async () => {
   console.log('ressources update done');
   console.log('map ready');
 };
+// generateMap()
